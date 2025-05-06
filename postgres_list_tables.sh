@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# ==== Configuration ====
 NAMESPACE="default"
-POD_NAME="postgres-5f7bcd459c-n99t9"
+POD_NAME="postgres-db-1"
 DB_USER="postgres"
+# =======================
 
 # Get all databases, skip templates
 DATABASES=$(kubectl exec -n "$NAMESPACE" "$POD_NAME" -- \
